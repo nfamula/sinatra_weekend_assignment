@@ -1,17 +1,18 @@
 <form method ="post" action="/messages">
 	<div>
 		<label>Author:</label>
-		<input type= "text" name="author" value ="<%= @message && @message.author%>">
+		<input type= "text" name="author" value ="<%= @message.author%>">
 	</div>
 	<div>
-		<label>Subject:</label>
+		<label>Title:</label>
+		<input type="text" name="title" value ="<%= @message.title%>">>
 	</div>
 	<div>
 		<label>Content:</label>
-		<input type="text" name="content" value ="<%= @message && @message.content%>">>
+		<input type="text" name="content" value ="<%= @message.content%>">>
 	</div>
 	<div>
-		<input type="submit" name="Submit" value ="<%= @message && @message.submit%>">>
+		<input type="submit" value="Submit">
 	</div>
 <% if @message && @message.errors.any? %>
 	<div>
